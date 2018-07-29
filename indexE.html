@@ -14,7 +14,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body>
+	<body ng-app="sunnyweb">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -28,68 +28,10 @@
 								<span class="image main"><img src="images/w22.jpg" alt="" /></span>
 
 								</header>
-
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>About us<br />
-											</h1>
-										</header>
-											<font  color="black">
-											&nbsp;&nbsp;&nbsp;&nbsp;SUNNY TECHNOLOGY CO., LTD. Was established in 1993.The main goal we always keep is research and promotion -- quality best, technology first. </p>
-											&nbsp;&nbsp;&nbsp;&nbsp;We care what's clients cared.  And providing the products with  best quality and reasonable price is always we asked for all our clients.</p>
-											&nbsp;&nbsp;&nbsp;&nbsp;Our main products separate to two main programs one is car parking sensor (waterproof type ultrasonic transducer) another one is home automatic controlor.</p>
-											&nbsp;&nbsp;&nbsp;&nbsp;We provide production, selling and technology service of above products.  Also accept related electron products research and production. </p>
-											</font>
-									</div>
-									<span class="image object">
-									<style type="text/css">.easyhtml5video .eh5v_script{display:none}</style>
-<div class="easyhtml5video" style="position:relative;max-width:480px;"><video controls  autoplay="autoplay" poster="eh5v.files/html5video/PhotoStory2.jpg" style="width:100%" title="Video" loop onEnded="var v=this;setTimeout(function(){v.play()},300)">
-<source src="eh5v.files/html5video/PhotoStory2.webm" type="video/webm" />
-<source src="eh5v.files/html5video/PhotoStory2.ogv" type="video/ogg" />
-<source src="eh5v.files/html5video/PhotoStory2.mp4" />
-</video><div class="eh5v_script"></div></div>
-<script src="eh5v.files/html5video/html5ext.js" type="text/javascript"></script>
-									<!--	<img src="images/pic10.jpg" alt="" />-->
-									</span>
-
-								</section>
-
-							<!-- Section -->
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>main products</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="autocontrol1E.html" class="image"><img src="images/w11_2.jpg" alt="" /></a>
-											<h3>Home Autocontrol</h3>
-											<p>Focus on home autocontrol equipment.</p>
-											<ul class="actions">
-												<li><a href="autocontrol1E.html" class="button">More</a></li>
-											</ul>
-										</article>
-										<article>
-											<a href="sensor1E.html" class="image"><img src="images/q3.jpg" alt="" /></a>
-											<h3> Ultrasonic Sensor</h3>
-											<p>Can be used in parking sensor and indoor short distance 3D positioning system etc.</p>
-											<ul class="actions">
-												<li><a href="sensor1E.html" class="button">More</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
-								<section>
-								<div style="text-align:center">
-										SUNNY TECHNOLOGY CO.,LTD.</br>
-										NO.4 LANE. 117 SEC. 4 HEWEI ROAD TAINAN TAIWAN</br>
-										Tel: 886-6-2580620&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fax:886-6-2596497</br>
-										E-mail: suntechnn@yahoo.com.tw</br>
+								
+								<br/><br/>
+								<div ng-view>
 								</div>
-								</section>
 
 						</div>
 					</div>
@@ -104,34 +46,34 @@
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="indexE.html">Home</a></li>
+										<li><a href="#!en-us/">Home</a></li>
 										<li>
 											<span class="opener">Home Autocontrol</span>
 											<ul>
-												<li><a href="autocontrol1E.html">PIR INFRARED LIGHTING SWITCH</a></li>
-												<li><a href="autocontrol2E.html">PIR STAIR LIGHTING SWITCH</a></li>
-												<li><a href="autocontrol3E.html">DISGUISED BURGLARPROOF AUTOMATIC LIGHTING SWITCH</a></li>
-												<li><a href="autocontrol4E.html">HANDCLAP VOICE CONTROL LIGHTING SWITCH</a></li>
-												<li><a href="autocontrol5E.html">NO TOUCH LIGHTING SWITCH</a></li>
+												<li><a href="#!en-us/autocontrol/p1">PIR INFRARED LIGHTING SWITCH</a></li>
+												<li><a href="#!en-us/autocontrol/p2">PIR STAIR LIGHTING SWITCH</a></li>
+												<li><a href="#!en-us/autocontrol/p3">DISGUISED BURGLARPROOF AUTOMATIC LIGHTING SWITCH</a></li>
+												<li><a href="#!en-us/autocontrol/p4">HANDCLAP VOICE CONTROL LIGHTING SWITCH</a></li>
+												<li><a href="#!en-us/autocontrol/p5">NO TOUCH LIGHTING SWITCH</a></li>
 											</ul>
 										</li>
 										<li>
 											<span class="opener">Ultrasonic Sensor</span>
 											<ul>
-												<li><a href="sensor1E.html">SU-40TR14E</a></li>
-												<li><a href="sensor2E.html">SU-40TR15CASE</a></li>
-												<li><a href="sensor3E.html">SU-40TR15DE-B</a></li>
-												<li><a href="sensor4E.html">SU-40TR15DE-S</a></li>
-												<li><a href="sensor5E.html">SU-40TR15DE-W</a></li>
-												<li><a href="sensor6E.html">SU-40TR18CASE</a></li>
-												<li><a href="sensor7E.html">SU-40TR18DE</a></li>
-												<li><a href="sensor8E.html">SU-40TR18E</a></li>
-												<li><a href="sensor9E.html">SU-ATA01</a></li>
-												<li><a href="sensor10E.html">Ultrasonic Sensor Application</a></li>
+												<li><a href="#!en-us/sensor/p1">SU-40TR14E</a></li>
+												<li><a href="#!en-us/sensor/p2">SU-40TR15CASE</a></li>
+												<li><a href="#!en-us/sensor/p3">SU-40TR15DE-B</a></li>
+												<li><a href="#!en-us/sensor/p4">SU-40TR15DE-S</a></li>
+												<li><a href="#!en-us/sensor/p5">SU-40TR15DE-W</a></li>
+												<li><a href="#!en-us/sensor/p6">SU-40TR18CASE</a></li>
+												<li><a href="#!en-us/sensor/p7">SU-40TR18DE</a></li>
+												<li><a href="#!en-us/sensor/p8">SU-40TR18E</a></li>
+												<li><a href="#!en-us/sensor/p9">SU-ATA01</a></li>
+												<li><a href="#!en-us/sensor/p10">Ultrasonic Sensor Application</a></li>
 											</ul>
 										</li>
-										<li><a href="newsE.html">News</a></li>
-										<li><a href="contactusE.html">Contact Us</a></li>
+										<li><a href="#!en-us/news">News</a></li>
+										<li><a href="#!en-us/contactus">Contact Us</a></li>
 										<li><a href="index.html">中文</a></li>
 									</ul>
 								</nav>
@@ -169,6 +111,9 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+			<script src="assets/js/script.en.js"></script>
 
 	</body>
 </html>
