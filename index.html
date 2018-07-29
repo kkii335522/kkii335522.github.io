@@ -42,7 +42,7 @@
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
-									<ul>
+									<ul ng-bind-html="menutext">
 										<li><a href="#!zh-tw">Home</a></li>
 										<li>
 											<span class="opener">家庭自動化</span>
@@ -78,7 +78,7 @@
 							<!-- Section -->
 
 							<!-- Section -->
-								<section>
+								<section ng-bind-html="contacttext">
 									<header class="major">
 										<h2>聯絡方式</h2>
 									</header>
@@ -110,6 +110,7 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-sanitize.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 			<script src="assets/js/script.zh.js"></script>
 
