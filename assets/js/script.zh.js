@@ -176,16 +176,35 @@ app.controller("Ctrl", function ($scope) {
 	else{
 		subpath=window.location.href.split("#!/")[1];
 	}
-	//alert(subpath);
 });
 
 app.controller('sunnyctrl', function($scope) {
+	if(subpath.indexOf("en-us")!=-1){
+			$scope.menutext=engmenu();
+			$scope.contacttext=engcontact();
+	}
+	else{
+		$scope.menutext=chtmenu();
+		$scope.contacttext=chtcontact();
+	}
     $scope.changeLang = function() {
 		if(subpath.indexOf("en-us")!=-1)subpath=subpath.replace("en-us","zh-tw");
 		else if(subpath.indexOf("zh-tw")==-1)subpath="en-us";
 		else subpath=subpath.replace("zh-tw","en-us");
 		if(subpath.indexOf("en-us")!=-1){
-			$scope.menutext='\
+			$scope.menutext=engmenu();
+			$scope.contacttext=engcontact();
+		}
+		else{
+			$scope.menutext=chtmenu();
+			$scope.contacttext=chtcontact();
+		}
+        location.href='#!'+subpath;
+    }
+});
+
+function engmenu(){
+	return '\
 										<li><a href="#!en-us/">Home</a></li>\
 										<li>\
 											<span class="opener">Home Autocontrol</span>\
@@ -216,7 +235,10 @@ app.controller('sunnyctrl', function($scope) {
 										<li><a href="#!en-us/contactus">Contact Us</a></li>\
 										<li><a href="" ng-click="changeLang()">中文</a></li>\
 									';
-			$scope.contacttext='<header class="major">\
+}
+
+function engcontact(){
+	return '<header class="major">\
 										<h2>Contact Method</h2>\
 									</header>\
 									<p> If you need our service, you can use the following contact information.</p>\
@@ -227,9 +249,10 @@ app.controller('sunnyctrl', function($scope) {
 										<li class="fa-home">NO.4 LANE. 117 SEC. 4 HEWEI ROAD TAINAN TAIWAN<br />\
 										</li>\
 									</ul>';
-		}
-		else{
-			$scope.menutext='<li><a href="#!zh-tw">Home</a></li>\
+}
+
+function chtmenu(){
+	return '<li><a href="#!zh-tw">Home</a></li>\
 										<li>\
 											<span class="opener">家庭自動化</span>\
 											<ul>\
@@ -258,7 +281,10 @@ app.controller('sunnyctrl', function($scope) {
 										<li><a href="#!zh-tw/news">最新消息</a></li>\
 										<li><a href="#!zh-tw/contactus">聯絡我們</a></li>\
 										<li><a href="" ng-click="changeLang()">English</a></li>';
-			$scope.contacttext='<header class="major">\
+
+}	
+function chtcontact(){
+	return '<header class="major">\
 										<h2>聯絡方式</h2>\
 									</header>\
 									<p> 非常高興您光臨我們公司的網站，感謝您的支持，以下是我們的聯絡方式。</p>\
@@ -269,7 +295,4 @@ app.controller('sunnyctrl', function($scope) {
 										<li class="fa-home">台南市北區和緯路四段117巷4號<br />\
 										</li>\
 									</ul>';
-		}
-        location.href='#!'+subpath;
-    }
-});
+}
