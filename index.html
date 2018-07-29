@@ -42,36 +42,36 @@
 									<header class="major">
 										<h2>Menu</h2>
 									</header>
-									<ul ng-bind-html="menutext">
-										<li><a href="#!zh-tw">Home</a></li>
+									<ul>
+										<li><a href="#!{{lang}}">Home</a></li>
 										<li>
-											<span class="opener">家庭自動化</span>
+											<span class="opener">{{auto}}</span>
 											<ul>
-												<li><a href="#!zh-tw/autocontrol/p1">PIR紅外線感應點燈開關</a></li>
-												<li><a href="#!zh-tw/autocontrol/p2">PIR感應自動樓梯燈(雙切)開關</a></li>
-												<li><a href="#!zh-tw/autocontrol/p3">防盜偽裝自動點燈開關</a></li>
-												<li><a href="#!zh-tw/autocontrol/p4">拍手聲控點燈開關</a></li>
-												<li><a href="#!zh-tw/autocontrol/p5">非接觸感應點燈開關</a></li>
+												<li><a href="#!{{lang}}/autocontrol/p1">{{autop1}}</a></li>
+												<li><a href="#!{{lang}}/autocontrol/p2">{{autop2}}</a></li>
+												<li><a href="#!{{lang}}/autocontrol/p3">{{autop3}}</a></li>
+												<li><a href="#!{{lang}}/autocontrol/p4">{{autop4}}</a></li>
+												<li><a href="#!{{lang}}/autocontrol/p5">{{autop5}}</a></li>
 											</ul>
 										</li>
 										<li>
-											<span class="opener">超音波換能器</span>
+											<span class="opener">{{sensor}}</span>
 											<ul>
-												<li><a href="#!zh-tw/sensor/p1">SU-40TR14E</a></li>
-												<li><a href="#!zh-tw/sensor/p2">SU-40TR15CASE</a></li>
-												<li><a href="#!zh-tw/sensor/p3">SU-40TR15DE-B</a></li>
-												<li><a href="#!zh-tw/sensor/p4">SU-40TR15DE-S</a></li>
-												<li><a href="#!zh-tw/sensor/p5">SU-40TR15DE-W</a></li>
-												<li><a href="#!zh-tw/sensor/p6">SU-40TR18CASE</a></li>
-												<li><a href="#!zh-tw/sensor/p7">SU-40TR18DE</a></li>
-												<li><a href="#!zh-tw/sensor/p8">SU-40TR18E</a></li>
-												<li><a href="#!zh-tw/sensor/p9">SU-ATA01</a></li>
-												<li><a href="#!zh-tw/sensor/p10">超音波感應器相關運用</a></li>
+												<li><a href="#!{{lang}}/sensor/p1">SU-40TR14E</a></li>
+												<li><a href="#!{{lang}}/sensor/p2">SU-40TR15CASE</a></li>
+												<li><a href="#!{{lang}}/sensor/p3">SU-40TR15DE-B</a></li>
+												<li><a href="#!{{lang}}/sensor/p4">SU-40TR15DE-S</a></li>
+												<li><a href="#!{{lang}}/sensor/p5">SU-40TR15DE-W</a></li>
+												<li><a href="#!{{lang}}/sensor/p6">SU-40TR18CASE</a></li>
+												<li><a href="#!{{lang}}/sensor/p7">SU-40TR18DE</a></li>
+												<li><a href="#!{{lang}}/sensor/p8">SU-40TR18E</a></li>
+												<li><a href="#!{{lang}}/sensor/p9">SU-ATA01</a></li>
+												<li><a href="#!{{lang}}/sensor/p10">{{sensorp10}}</a></li>
 											</ul>
 										</li>
-										<li><a href="#!zh-tw/news">最新消息</a></li>
-										<li><a href="#!zh-tw/contactus">聯絡我們</a></li>
-										<li><a href="" ng-click="changeLang()">English</a></li>
+										<li><a href="#!{{lang}}/news">{{news}}</a></li>
+										<li><a href="#!{{lang}}/contactus">{{contact}}</a></li>
+										<li><a href="" ng-click="changeLang()">{{language}}</a></li>
 									</ul>
 								</nav>
 

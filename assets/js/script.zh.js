@@ -180,11 +180,33 @@ app.controller("Ctrl", function ($scope) {
 
 app.controller('sunnyctrl', function($scope) {
 	if(subpath.indexOf("en-us")!=-1){
-			$scope.menutext=engmenu();
-			$scope.contacttext=engcontact();
+		$scope.lang='en-us';
+		$scope.auto='Home Autocontrol';
+		$scope.autop1='PIR INFRARED LIGHTING SWITCH';
+		$scope.autop2='PIR STAIR LIGHTING SWITCH';
+		$scope.autop3='DISGUISED BURGLARPROOF AUTOMATIC LIGHTING SWITCH';
+		$scope.autop4='HANDCLAP VOICE CONTROL LIGHTING SWITCH';
+		$scope.autop5='NO TOUCH LIGHTING SWITCH';
+		$scope.sensor='Ultrasonic Sensor';
+		$scope.sensorp10='Ultrasonic Sensor Application';
+		$scope.news='News';
+		$scope.contact='Contact Us';
+		$scope.language='中文';
+		$scope.contacttext=engcontact();
 	}
 	else{
-		$scope.menutext=chtmenu();
+		$scope.lang='zh-tw';
+		$scope.auto='家庭自動化';
+		$scope.autop1='PIR紅外線感應點燈開關';
+		$scope.autop2='PIR感應自動樓梯燈(雙切)開關';
+		$scope.autop3='防盜偽裝自動點燈開關';
+		$scope.autop4='拍手聲控點燈開關';
+		$scope.autop5='非接觸感應點燈開關';
+		$scope.sensor='超音波換能器';
+		$scope.sensorp10='超音波感應器相關運用';
+		$scope.news='最新消息';
+		$scope.contact='聯絡我們';
+		$scope.language='English';
 		$scope.contacttext=chtcontact();
 	}
     $scope.changeLang = function() {
@@ -192,50 +214,39 @@ app.controller('sunnyctrl', function($scope) {
 		else if(subpath.indexOf("zh-tw")==-1)subpath="en-us";
 		else subpath=subpath.replace("zh-tw","en-us");
 		if(subpath.indexOf("en-us")!=-1){
-			$scope.menutext=engmenu();
+			$scope.lang='en-us';
+			$scope.auto='Home Autocontrol';
+			$scope.autop1='PIR INFRARED LIGHTING SWITCH';
+			$scope.autop2='PIR STAIR LIGHTING SWITCH';
+			$scope.autop3='DISGUISED BURGLARPROOF AUTOMATIC LIGHTING SWITCH';
+			$scope.autop4='HANDCLAP VOICE CONTROL LIGHTING SWITCH';
+			$scope.autop5='NO TOUCH LIGHTING SWITCH';
+			$scope.sensor='Ultrasonic Sensor';
+			$scope.sensorp10='Ultrasonic Sensor Application';
+			$scope.news='News';
+			$scope.contact='Contact Us';
+			$scope.language='中文';
 			$scope.contacttext=engcontact();
 		}
 		else{
-			$scope.menutext=chtmenu();
+			$scope.lang='zh-tw';
+			$scope.auto='家庭自動化';
+			$scope.autop1='PIR紅外線感應點燈開關';
+			$scope.autop2='PIR感應自動樓梯燈(雙切)開關';
+			$scope.autop3='防盜偽裝自動點燈開關';
+			$scope.autop4='拍手聲控點燈開關';
+			$scope.autop5='非接觸感應點燈開關';
+			$scope.sensor='超音波換能器';
+			$scope.sensorp10='超音波感應器相關運用';
+			$scope.news='最新消息';
+			$scope.contact='聯絡我們';
+			$scope.language='English';
 			$scope.contacttext=chtcontact();
 		}
         location.href='#!'+subpath;
     }
 });
 
-function engmenu(){
-	return '\
-										<li><a href="#!en-us/">Home</a></li>\
-										<li>\
-											<span class="opener">Home Autocontrol</span>\
-											<ul>\
-												<li><a href="#!en-us/autocontrol/p1">PIR INFRARED LIGHTING SWITCH</a></li>\
-												<li><a href="#!en-us/autocontrol/p2">PIR STAIR LIGHTING SWITCH</a></li>\
-												<li><a href="#!en-us/autocontrol/p3">DISGUISED BURGLARPROOF AUTOMATIC LIGHTING SWITCH</a></li>\
-												<li><a href="#!en-us/autocontrol/p4">HANDCLAP VOICE CONTROL LIGHTING SWITCH</a></li>\
-												<li><a href="#!en-us/autocontrol/p5">NO TOUCH LIGHTING SWITCH</a></li>\
-											</ul>\
-										</li>\
-										<li>\
-											<span class="opener">Ultrasonic Sensor</span>\
-											<ul>\
-												<li><a href="#!en-us/sensor/p1">SU-40TR14E</a></li>\
-												<li><a href="#!en-us/sensor/p2">SU-40TR15CASE</a></li>\
-												<li><a href="#!en-us/sensor/p3">SU-40TR15DE-B</a></li>\
-												<li><a href="#!en-us/sensor/p4">SU-40TR15DE-S</a></li>\
-												<li><a href="#!en-us/sensor/p5">SU-40TR15DE-W</a></li>\
-												<li><a href="#!en-us/sensor/p6">SU-40TR18CASE</a></li>\
-												<li><a href="#!en-us/sensor/p7">SU-40TR18DE</a></li>\
-												<li><a href="#!en-us/sensor/p8">SU-40TR18E</a></li>\
-												<li><a href="#!en-us/sensor/p9">SU-ATA01</a></li>\
-												<li><a href="#!en-us/sensor/p10">Ultrasonic Sensor Application</a></li>\
-											</ul>\
-										</li>\
-										<li><a href="#!en-us/news">News</a></li>\
-										<li><a href="#!en-us/contactus">Contact Us</a></li>\
-										<li><a href="" ng-click="changeLang()">中文</a></li>\
-									';
-}
 
 function engcontact(){
 	return '<header class="major">\
@@ -251,38 +262,7 @@ function engcontact(){
 									</ul>';
 }
 
-function chtmenu(){
-	return '<li><a href="#!zh-tw">Home</a></li>\
-										<li>\
-											<span class="opener">家庭自動化</span>\
-											<ul>\
-												<li><a href="#!zh-tw/autocontrol/p1">PIR紅外線感應點燈開關</a></li>\
-												<li><a href="#!zh-tw/autocontrol/p2">PIR感應自動樓梯燈(雙切)開關</a></li>\
-												<li><a href="#!zh-tw/autocontrol/p3">防盜偽裝自動點燈開關</a></li>\
-												<li><a href="#!zh-tw/autocontrol/p4">拍手聲控點燈開關</a></li>\
-												<li><a href="#!zh-tw/autocontrol/p5">非接觸感應點燈開關</a></li>\
-											</ul>\
-										</li>\
-										<li>\
-											<span class="opener">超音波換能器</span>\
-											<ul>\
-												<li><a href="#!zh-tw/sensor/p1">SU-40TR14E</a></li>\
-												<li><a href="#!zh-tw/sensor/p2">SU-40TR15CASE</a></li>\
-												<li><a href="#!zh-tw/sensor/p3">SU-40TR15DE-B</a></li>\
-												<li><a href="#!zh-tw/sensor/p4">SU-40TR15DE-S</a></li>\
-												<li><a href="#!zh-tw/sensor/p5">SU-40TR15DE-W</a></li>\
-												<li><a href="#!zh-tw/sensor/p6">SU-40TR18CASE</a></li>\
-												<li><a href="#!zh-tw/sensor/p7">SU-40TR18DE</a></li>\
-												<li><a href="#!zh-tw/sensor/p8">SU-40TR18E</a></li>\
-												<li><a href="#!zh-tw/sensor/p9">SU-ATA01</a></li>\
-												<li><a href="#!zh-tw/sensor/p10">超音波感應器相關運用</a></li>\
-											</ul>\
-										</li>\
-										<li><a href="#!zh-tw/news">最新消息</a></li>\
-										<li><a href="#!zh-tw/contactus">聯絡我們</a></li>\
-										<li><a href="" ng-click="changeLang()">English</a></li>';
 
-}	
 function chtcontact(){
 	return '<header class="major">\
 										<h2>聯絡方式</h2>\
