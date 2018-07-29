@@ -1,3 +1,4 @@
+var subpath="";
 var app = angular.module("sunnyweb", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
@@ -88,6 +89,11 @@ app.config(function($routeProvider) {
 });
 
 app.controller("Ctrl", function ($scope) {
-	
-	alert(window.location.href);
+	if(window.location.href.indexOf("#!/")!=-1){
+		subpath="index";
+	}
+	else{
+		subpath=window.location.href.split("#!/")[1];
+	}
+	alert(subpath);
 });
