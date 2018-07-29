@@ -181,6 +181,7 @@ app.controller("Ctrl", function ($scope) {
 app.controller('sunnyctrl', function($scope) {
 	if(subpath.indexOf("en-us")!=-1){
 		$scope.lang='en-us';
+		$scope.title='SUNNY TECHNOLOGY CO.,LTD.';
 		$scope.auto='Home Autocontrol';
 		$scope.autop1='PIR INFRARED LIGHTING SWITCH';
 		$scope.autop2='PIR STAIR LIGHTING SWITCH';
@@ -196,6 +197,7 @@ app.controller('sunnyctrl', function($scope) {
 	}
 	else{
 		$scope.lang='zh-tw';
+		$scope.title='勝立科技有限公司-主要產品有倒車雷達感測元件(密閉式超音波換能器)與家庭自動化控制器等。';
 		$scope.auto='家庭自動化';
 		$scope.autop1='PIR紅外線感應點燈開關';
 		$scope.autop2='PIR感應自動樓梯燈(雙切)開關';
@@ -215,6 +217,7 @@ app.controller('sunnyctrl', function($scope) {
 		else subpath=subpath.replace("zh-tw","en-us");
 		if(subpath.indexOf("en-us")!=-1){
 			$scope.lang='en-us';
+			$scope.title='SUNNY TECHNOLOGY CO.,LTD.';
 			$scope.auto='Home Autocontrol';
 			$scope.autop1='PIR INFRARED LIGHTING SWITCH';
 			$scope.autop2='PIR STAIR LIGHTING SWITCH';
@@ -230,6 +233,7 @@ app.controller('sunnyctrl', function($scope) {
 		}
 		else{
 			$scope.lang='zh-tw';
+			$scope.title='勝立科技有限公司-主要產品有倒車雷達感測元件(密閉式超音波換能器)與家庭自動化控制器等。';
 			$scope.auto='家庭自動化';
 			$scope.autop1='PIR紅外線感應點燈開關';
 			$scope.autop2='PIR感應自動樓梯燈(雙切)開關';
