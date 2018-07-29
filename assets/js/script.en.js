@@ -89,7 +89,7 @@ app.config(function($routeProvider) {
 });
 
 app.controller("Ctrl", function ($scope) {
-	if(window.location.href.indexOf("#!/")!=-1){
+	if(window.location.href.indexOf("#!/")==-1){
 		subpath="index";
 	}
 	else{
