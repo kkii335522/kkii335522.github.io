@@ -14,7 +14,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
-	<body ng-app="sunnyweb">
+	<body ng-app="sunnyweb" ng-controller="sunnyctrl">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -71,7 +71,7 @@
 										</li>
 										<li><a href="#!zh-tw/news">最新消息</a></li>
 										<li><a href="#!zh-tw/contactus">聯絡我們</a></li>
-										<li><a href="indexE.html">English</a></li>
+										<li><a href="" ng-click="changeLang()">English</a></li>
 									</ul>
 								</nav>
 
