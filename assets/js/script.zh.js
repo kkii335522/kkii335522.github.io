@@ -179,6 +179,12 @@ app.controller("Ctrl", function ($scope) {
 });
 
 app.controller('sunnyctrl', function($scope) {
+	if(window.location.href.indexOf("#!/")==-1){
+		subpath="";
+	}
+	else{
+		subpath=window.location.href.split("#!/")[1];
+	}
 	if(subpath.indexOf("en-us")!=-1){
 		$scope.lang='en-us';
 		$scope.title='SUNNY TECHNOLOGY CO.,LTD.';
