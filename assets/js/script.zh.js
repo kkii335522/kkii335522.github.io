@@ -217,10 +217,7 @@ app.controller('sunnyctrl', function($scope) {
 		$scope.language='English';
 		$scope.contacttext=chtcontact();
 	}
-    $scope.changeLang = function() {
-		if(subpath.indexOf("en-us")!=-1)subpath=subpath.replace("en-us","zh-tw");
-		else if(subpath.indexOf("zh-tw")==-1)subpath="en-us";
-		else subpath=subpath.replace("zh-tw","en-us");
+	$scope.$on('$viewContentLoaded',function(){
 		if(subpath.indexOf("en-us")!=-1){
 			$scope.lang='en-us';
 			$scope.title='SUNNY TECHNOLOGY CO.,LTD.';
@@ -253,6 +250,13 @@ app.controller('sunnyctrl', function($scope) {
 			$scope.language='English';
 			$scope.contacttext=chtcontact();
 		}
+		
+	});
+    $scope.changeLang = function() {
+		if(subpath.indexOf("en-us")!=-1)subpath=subpath.replace("en-us","zh-tw");
+		else if(subpath.indexOf("zh-tw")==-1)subpath="en-us";
+		else subpath=subpath.replace("zh-tw","en-us");
+		
         location.href='#!'+subpath;
     }
 });
